@@ -1,0 +1,39 @@
+Sem uložte fotky ambulancie presne s týmito názvami súborov (malé písmená, bez diakritiky, .jpg).
+Web ich zobrazí automaticky – nič iné netreba meniť.
+Odporúčaná veľkosť: dlhšia strana 1600 – 2000 px, súbor do 300 kB.
+Podrobný zoznam s tipmi na fotenie: ZOZNAM-FOTIEK.html (o priečinok vyššie ako web).
+
+uvodna-fotka.jpg                       Hlavná fotka úvodnej stránky – lekár vo vyšetrovni alebo vyšetrovňa s ORL jednotkou
+budova-ambulancie.jpg                  Budova z ulice, aby bol jasne vidieť vchod
+vchod.jpg                              Vchod do ambulancie s označením (tabuľa s logom, zvonček)
+cakaren.jpg                            Čakáreň – celkový pohľad
+cakaren-detail.jpg                     Čakáreň – detail (sedenie, detský kútik alebo nástenka)
+recepcia.jpg                           Recepcia / pracovisko sestry
+bezbarierovy-pristup.jpg               Bezbariérový prístup – rampa, výťah alebo široké dvere (ak sú)
+parkovanie.jpg                         Parkovanie pred budovou alebo najbližšie parkovisko
+vysetrovna.jpg                         Vyšetrovňa – celkový pohľad na šírku
+orl-vysetrovacia-jednotka.jpg          ORL vyšetrovacia jednotka s kreslom
+vysetrovacie-kreslo.jpg                Vyšetrovacie kreslo – detail
+orl-nastroje.jpg                       Nástroje na vyšetrenie (otoskop, nosové zrkadlo, zrkadielka) – detail
+celove-svetlo.jpg                      Čelové svetlo alebo čelové zrkadlo – detail
+endoskopicka-zostava.jpg               Endoskopická zostava s kamerou a monitorom
+endoskop-detail.jpg                    Endoskop (optika) – detail
+flexibilny-endoskop.jpg                Flexibilný endoskop (ak ho ambulancia má)
+endoskopia-obraz-na-monitore.jpg       Monitor s endoskopickým obrazom (ilustračný, bez údajov pacienta)
+orl-mikroskop.jpg                      ORL mikroskop
+audiometer.jpg                         Audiometer (prístroj na vyšetrenie sluchu)
+audiometricka-kabina.jpg               Zvukotesná kabína alebo tichá miestnosť na vyšetrenie sluchu
+tympanometer.jpg                       Tympanometer
+sterilizacia.jpg                       Sterilizátor / autokláv
+jednorazove-pomocky.jpg                Jednorazové pomôcky a dezinfekcia
+lekar-portret.jpg                      Portrét lekára
+lekar-pri-vysetreni.jpg                Lekár pri vyšetrení (figurant alebo pacient s písomným súhlasom)
+sestra-portret.jpg                     Portrét sestry
+tim.jpg                                Spoločná fotka tímu
+vysetrenie-sluchu.jpg                  Vyšetrenie sluchu – pacient so slúchadlami v kabíne
+endoskopia-vysetrenie.jpg              Endoskopické vyšetrenie nosa (figurant)
+vysetrenie-ucha-mikroskopom.jpg        Vyšetrenie ucha pod mikroskopom (figurant)
+vysetrenie-zavratov.jpg                Vyšetrenie závratov – okuliare na sledovanie pohybov očí alebo polohový test (figurant)
+vysetrenie-chrapania.jpg               Vyšetrenie hrdla pri chrápaní (figurant)
+vysetrenie-dietata.jpg                 Vyšetrenie ucha dieťaťa na kolenách rodiča (s písomným súhlasom rodiča)
+vysetrenie-hrdla.jpg                   Vyšetrenie hrdla alebo nosa (figurant)

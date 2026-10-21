@@ -1,0 +1,70 @@
+# =========================================================
+# ORL Nad jazerom – nastavenia pre hosting s Apache (.htaccess)
+# Ak hosting .htaccess nepodporuje (napr. Netlify, Cloudflare Pages), súbor ignorujte.
+# =========================================================
+
+ErrorDocument 404 /404.html
+DirectoryIndex index.html
+AddDefaultCharset UTF-8
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # 1) Vždy HTTPS
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # 2) Jedna hlavná adresa: bez www -> s www (zmeňte, ak chcete opačne)
+  RewriteCond %{HTTP_HOST} ^orlnadjazerom\.sk$ [NC]
+  RewriteRule ^ https://www.orlnadjazerom.sk%{REQUEST_URI} [L,R=301]
+
+  # 3) /stranka/index.html -> /stranka/
+  RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html[\s?] [NC]
+  RewriteRule ^(.*/)?index\.html$ /$1 [L,R=301]
+</IfModule>
+
+<IfModule mod_mime.c>
+  AddType image/svg+xml .svg
+  AddType font/woff2 .woff2
+  AddType application/manifest+json .webmanifest
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript application/json application/manifest+json image/svg+xml
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 hour"
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/css "access plus 1 week"
+  ExpiresByType application/javascript "access plus 1 week"
+  ExpiresByType text/javascript "access plus 1 week"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/webp "access plus 1 month"
+</IfModule>
+
+# Nastavenia (oznamy, dovolenka) sa musia prejaviť hneď – bez dlhej cache
+<FilesMatch "nastavenia\.js$">
+  <IfModule mod_expires.c>
+    ExpiresByType application/javascript "access plus 0 seconds"
+    ExpiresByType text/javascript "access plus 0 seconds"
+  </IfModule>
+  <IfModule mod_headers.c>
+    Header set Cache-Control "no-cache"
+  </IfModule>
+</FilesMatch>
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  # Po overení, že web beží len na HTTPS, môžete zapnúť HSTS:
+  # Header always set Strict-Transport-Security "max-age=31536000"
+</IfModule>
